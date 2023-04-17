@@ -36,7 +36,7 @@ public class servlet extends HttpServlet {
 		String pass=request.getParameter("pass");
 		try {
 			//Class.forName("com.mysql.jdbc.Driver");
-        	Connection conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/servlet","root","Forti");
+        	Connection conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/servlet","root","pass");
 			System.out.println("Connected With the database successfully");
 			Statement cur=conn.createStatement();
 			ResultSet rs=cur.executeQuery("select * from info;");
